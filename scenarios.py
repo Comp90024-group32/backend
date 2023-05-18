@@ -17,10 +17,13 @@ employee_enum = ["Clerical and Administrative Workers","Labourers","Machinery Op
 school_type_enum = ['type_of_education_institution_Full_time_student', 'catholic', 'Total_Primary', 'type_of_education_institution_Total', 'Total_Tertiary', 'of_education_institution_not_stated', 'type_of_education_institution_Part_time_student', 'Total_Secondary', 'other-non-government', 'type_of_education_institution_Full_time_Part_time_student_status_not_stated', 'government', 'university']
 def marital_status(args):
     
-    start_year = args.get('start_year')
-    start_month = args.get('start_month')
-    end_year = args.get('end_year')
-    end_month = args.get('end_month')
+    start_year = int(args.get('start_year'))
+    start_month = int(args.get('start_month'))
+    start_day = int(args.get('start_day'))
+
+    end_year = int(args.get('end_year'))
+    end_month = int(args.get('end_month'))
+    end_day = int(args.get('end_day'))
     age_group = args.get('age_group')
     area = args.get('area')
     sex = args.get('sex')
@@ -101,15 +104,15 @@ def marital_status(args):
         result = {}
         result['time_marital_status'] = []
         if start_year != 0 and start_month != 0 and end_year != 0 and end_month != 0:
-            time_list = utils.generate_time_list(int(start_year),int(start_month),int(end_year),int(end_month))
+            time_list = utils.generate_time_list(int(start_year),int(start_month),int(start_day),int(end_year),int(end_month),int(end_day))
             for time in time_list:
                 for mar_para in mastodon_marital_enum:
-                    data = view_data.view_mastodon_time_marital(time[0],time[1],mar_para)
+                    data = view_data.view_mastodon_time_marital(time[0],time[1],time[2],mar_para)
                     temp = {}
                     count = 0
                     for item in data['rows']:
                         count += int(item['value'])
-                    temp['time'] = f'{time[0]}-{time[1]}'
+                    temp['time'] = f'{time[0]}-{time[1]}-{time[2]}'
                     temp['marital_status'] = mar_para
                     temp['count'] = count
                     result['time_marital_status'].append(temp)
@@ -118,10 +121,13 @@ def marital_status(args):
     return final_result
 
 def education(args):
-    start_year = args.get('start_year')
-    start_month = args.get('start_month')
-    end_year = args.get('end_year')
-    end_month = args.get('end_month')
+    start_year = int(args.get('start_year'))
+    start_month = int(args.get('start_month'))
+    start_day = int(args.get('start_day'))
+
+    end_year = int(args.get('end_year'))
+    end_month = int(args.get('end_month'))
+    end_day = int(args.get('end_day'))
 
     area = args.get('area')
     sex = args.get('sex')
@@ -215,15 +221,15 @@ def education(args):
         result = {}
         result['time_education'] = []
         if start_year != 0 and start_month != 0 and end_year != 0 and end_month != 0:
-            time_list = utils.generate_time_list(int(start_year),int(start_month),int(end_year),int(end_month))
+            time_list = utils.generate_time_list(int(start_year),int(start_month),int(start_day),int(end_year),int(end_month),int(end_day))
             for time in time_list:
                 for edu_para in education_level_enum:
-                    data = view_data.view_mastodon_time_education(time[0],time[1],edu_para)
+                    data = view_data.view_mastodon_time_education(time[0],time[1],time[2],edu_para)
                     temp = {}
                     count = 0
                     for item in data['rows']:
                         count += int(item['value'])
-                    temp['time'] = f'{time[0]}-{time[1]}'
+                    temp['time'] = f'{time[0]}-{time[1]}-{time[2]}'
                     temp['education'] = edu_para
                     temp['count'] = count
                     result['time_education'].append(temp)
@@ -232,15 +238,17 @@ def education(args):
     return final_result
 
 def employee(args):
-    start_year = args.get('start_year')
-    start_month = args.get('start_month')
-    end_year = args.get('end_year')
-    end_month = args.get('end_month')
-    #income_group = args.get('income_group')
+    start_year = int(args.get('start_year'))
+    start_month = int(args.get('start_month'))
+    start_day = int(args.get('start_day'))
+
+    end_year = int(args.get('end_year'))
+    end_month = int(args.get('end_month'))
+    end_day = int(args.get('end_day'))
     area = args.get('area')
     sex = args.get('sex')
     type = args.get('type')
-    #selected_income_group = income_group.split(',')
+    
     selected_sex_group = sex.split(',')
     selected_area_group = area.split(',')
     selected_type_group = type.split(',')
@@ -321,15 +329,15 @@ def employee(args):
         result = {}
         result['time_employee'] = []
         if start_year != 0 and start_month != 0 and end_year != 0 and end_month != 0:
-            time_list = utils.generate_time_list(int(start_year),int(start_month),int(end_year),int(end_month))
+            time_list = utils.generate_time_list(int(start_year),int(start_month),int(start_day),int(end_year),int(end_month),int(end_day))
             for time in time_list:
                 for emp_para in mastodon_employee_enum:
-                    data = view_data.view_mastodon_time_employee(time[0],time[1],emp_para)
+                    data = view_data.view_mastodon_time_employee(time[0],time[1],time[2],emp_para)
                     temp = {}
                     count = 0
                     for item in data['rows']:
                         count += int(item['value'])
-                    temp['time'] = f'{time[0]}-{time[1]}'
+                    temp['time'] = f'{time[0]}-{time[1]}-{time[2]}'
                     temp['employee'] = emp_para
                     temp['count'] = count
                     result['time_employee'].append(temp)

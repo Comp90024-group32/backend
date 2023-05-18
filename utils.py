@@ -1,15 +1,15 @@
-from datetime import datetime
+from datetime import datetime, timedelta
 from dateutil.relativedelta import relativedelta
 
-def generate_time_list(start_year, start_month, end_year, end_month):
-    start_date = datetime(start_year, start_month, 1)
-    end_date = datetime(end_year, end_month, 1)
+def generate_time_list(start_year, start_month, start_day, end_year, end_month, end_day):
+    start_date = datetime(start_year, start_month, start_day)
+    end_date = datetime(end_year, end_month, end_day)
     result = []
 
     current_date = start_date
     while current_date <= end_date:
-        result.append([current_date.year, current_date.month])
-        current_date = current_date + relativedelta(months=1)
+        result.append([current_date.year, current_date.month, current_date.day])
+        current_date = current_date + timedelta(days=1)
 
     return result
 

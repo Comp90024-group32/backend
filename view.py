@@ -5,6 +5,17 @@ couchdb_url = f"http://{host}:5984"
 username = "admin"
 password = "password"
 auth = (username,password)
+
+employment_sudo = ""
+employment_twitter = ""
+education_sudo = ""
+education_twitter = ""
+marital_sudo = ""
+marital_twiter = ""
+mastodon_education = "education_v1"
+mastodon_employee = "employee_v1"
+mastodon_marital = "marital_v1"
+
 def create_design_document(database_url, design_doc,database_name):
     response = requests.put(f"{database_url}/{database_name}/_design/my_design_doc", json=design_doc,auth=auth)
     if response.ok:
@@ -29,7 +40,7 @@ design_document_edu = {
     }   
   }
 }
-create_design_document(couchdb_url, design_document_edu,database_name="education-sudo")
+create_design_document(couchdb_url, design_document_edu,database_name=education_sudo)
 
 design_document_mar = {
   
@@ -45,7 +56,7 @@ design_document_mar = {
     }
   }
 }
-create_design_document(couchdb_url, design_document_mar,database_name="marital-sudo")
+create_design_document(couchdb_url, design_document_mar,database_name=marital_sudo)
 
 design_document_emp = {
   
@@ -61,37 +72,37 @@ design_document_emp = {
     }
   }
 }
-create_design_document(couchdb_url, design_document_emp,database_name="employment-sudo")
+create_design_document(couchdb_url, design_document_emp,database_name=employment_sudo)
 
 mastodon_design_document_edu = {
   
   "views": {
     "time_edu": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
-create_design_document(couchdb_url, mastodon_design_document_edu,database_name="education")
+create_design_document(couchdb_url, mastodon_design_document_edu,database_name=mastodon_education)
 
 mastodon_design_document_mar = {
   
   "views": {
     "time_mar": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
-create_design_document(couchdb_url, mastodon_design_document_mar,database_name="marital")
+create_design_document(couchdb_url, mastodon_design_document_mar,database_name=mastodon_marital)
 
 mastodon_design_document_emp = {
   
   "views": {
     "time_emp": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
-create_design_document(couchdb_url, mastodon_design_document_emp,database_name="employee")
+create_design_document(couchdb_url, mastodon_design_document_emp,database_name=mastodon_employee)
 
 twitter_design_document_edu = {
     "views":{
@@ -103,7 +114,7 @@ twitter_design_document_edu = {
         }
     }
 }
-create_design_document(couchdb_url, twitter_design_document_edu,database_name="education-twitter")
+create_design_document(couchdb_url, twitter_design_document_edu,database_name=education_twitter)
 
 twitter_design_document_mar = {
     "views":{
@@ -115,7 +126,7 @@ twitter_design_document_mar = {
         }
     }
 }
-create_design_document(couchdb_url, twitter_design_document_mar,database_name="marital-twitter")
+create_design_document(couchdb_url, twitter_design_document_mar,database_name=marital_twiter)
 
 twitter_design_document_emp = {
     "views":{
@@ -127,4 +138,4 @@ twitter_design_document_emp = {
         }
     }
 }
-create_design_document(couchdb_url, twitter_design_document_emp,database_name="employment-twitter")
+create_design_document(couchdb_url, twitter_design_document_emp,database_name=employment_twitter)

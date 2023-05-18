@@ -56,9 +56,22 @@ full_url = f'{url}?startkey={start_date}&endkey={end_date}'
 # make the request and get the response
 response = requests.get(full_url, auth=auth)
 print(response.json()['rows'])
-
-print(view_data.view_twitter_time_education(2000,1,2023,12))
 """
+host = "115.146.93.109"
+def view_mastodon_time_education(start_year,start_month,start_day,edu_para):
+    url = f'http://{host}:5984/education_v1/_design/my_design_doc/_view/time_edu'
+    # build the query parameters
+    params = urlencode({"key": json.dumps([start_year,start_month,start_day,edu_para])})
+
+    # construct the full URL
+    full_url = f'{url}?{params}'
+
+    # make the request and get the response
+    response = requests.get(full_url, auth=auth)
+
+    return response.json()
+print(view_mastodon_time_education(2023,5,13,'preshool'))
+
 
 """
 education_level_enum = ["Tertiary","Primary","Other","Preschool","Type","Secondary"]
@@ -114,7 +127,7 @@ def marital_status():
 marital_status()
 """
 
-
+"""
 host = "115.146.93.109"
 couchdb_url = f"http://{host}:5984"
 username = "admin"
@@ -131,7 +144,7 @@ mastodon_design_document_edu = {
   
   "views": {
     "time_edu": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
@@ -141,7 +154,7 @@ mastodon_design_document_mar = {
   
   "views": {
     "time_mar": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
@@ -151,8 +164,9 @@ mastodon_design_document_emp = {
   
   "views": {
     "time_emp": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
 create_design_document(couchdb_url, mastodon_design_document_emp,database_name="employee_v1")
+"""

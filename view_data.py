@@ -10,9 +10,19 @@ auth = ('admin', 'password')
 host = "115.146.93.109"
 #host = "localhost"
 
+employment_sudo = ""
+employment_twitter = ""
+education_sudo = ""
+education_twitter = ""
+marital_sudo = ""
+marital_twiter = ""
+mastodon_education = "education_v1"
+mastodon_employee = "employee_v1"
+mastodon_marital = "marital_v1"
+
 
 def view_sex_education(para_sex,para_edu):
-    url = f'http://{host}:5984/education-sudo/_design/my_design_doc/_view/sex_edu'
+    url = f'http://{host}:5984/{education_sudo}/_design/my_design_doc/_view/sex_edu'
     # build the query parameters
     params = urlencode({"key": json.dumps([para_sex,para_edu])})
 
@@ -26,7 +36,7 @@ def view_sex_education(para_sex,para_edu):
 
 
 def view_area_education(para_area,para_edu):
-    url = f'http://{host}:5984/education-sudo/_design/my_design_doc/_view/area_edu'
+    url = f'http://{host}:5984/{education_sudo}/_design/my_design_doc/_view/area_edu'
     # build the query parameters
     params = urlencode({"key": json.dumps([para_area,para_edu])})
 
@@ -39,7 +49,7 @@ def view_area_education(para_area,para_edu):
     return response.json()
 
 def view_area_marital_status(area_para,mar_para):
-    url = f'http://{host}:5984/marital-sudo/_design/my_design_doc/_view/area_mar'
+    url = f'http://{host}:5984/{marital_sudo}/_design/my_design_doc/_view/area_mar'
     # build the query parameters
     params = urlencode({"key": json.dumps([area_para,mar_para])})
 
@@ -52,7 +62,7 @@ def view_area_marital_status(area_para,mar_para):
     return response.json()
 
 def view_age_marital_status(age_para,mar_para):
-    url = f'http://{host}:5984/marital-sudo/_design/my_design_doc/_view/age_mar'
+    url = f'http://{host}:5984/{marital_sudo}/_design/my_design_doc/_view/age_mar'
     # build the query parameters
     params = urlencode({"key": json.dumps([age_para,mar_para])})
 
@@ -65,7 +75,7 @@ def view_age_marital_status(age_para,mar_para):
     return response.json()
 
 def view_sex_marital_status(sex_para,mar_para):
-    url = f'http://{host}:5984/marital-sudo/_design/my_design_doc/_view/sex_mar'
+    url = f'http://{host}:5984/{marital_sudo}/_design/my_design_doc/_view/sex_mar'
     # build the query parameters
     params = urlencode({"key": json.dumps([sex_para,mar_para])})
 
@@ -78,7 +88,7 @@ def view_sex_marital_status(sex_para,mar_para):
     return response.json()
 
 def view_sex_employee(sex_para,emp_para):
-    url = f'http://{host}:5984/employment-sudo/_design/my_design_doc/_view/sex_emp'
+    url = f'http://{host}:5984/{employment_sudo}/_design/my_design_doc/_view/sex_emp'
     # build the query parameters
     params = urlencode({"key": json.dumps([sex_para,emp_para])})
 
@@ -91,7 +101,7 @@ def view_sex_employee(sex_para,emp_para):
     return response.json()
 
 def view_area_employee(area_para,emp_para):
-    url = f'http://{host}:5984/employment-sudo/_design/my_design_doc/_view/area_emp'
+    url = f'http://{host}:5984/{employment_sudo}/_design/my_design_doc/_view/area_emp'
         # build the query parameters
     params = urlencode({"key": json.dumps([area_para,emp_para])})
 
@@ -104,7 +114,7 @@ def view_area_employee(area_para,emp_para):
     return response.json()
 
 def view_sex_school(sex_para,sch_para):
-    url = f'http://{host}:5984/education-sudo/_design/my_design_doc/_view/sex_sch'
+    url = f'http://{host}:5984/{education_sudo}/_design/my_design_doc/_view/sex_sch'
         # build the query parameters
     params = urlencode({"key": json.dumps([sex_para,sch_para])})
 
@@ -117,7 +127,7 @@ def view_sex_school(sex_para,sch_para):
     return response.json()
 
 def view_area_school_type(area_para,sch_para):
-    url = f'http://{host}:5984/education-sudo/_design/my_design_doc/_view/area_sch'
+    url = f'http://{host}:5984/{education_sudo}/_design/my_design_doc/_view/area_sch'
     # build the query parameters
     params = urlencode({"key": json.dumps([area_para,sch_para])})
 
@@ -130,7 +140,7 @@ def view_area_school_type(area_para,sch_para):
     return response.json()
 
 def view_type_employee(type_para,emp_para):
-    url = f'http://{host}:5984/employment-sudo/_design/my_design_doc/_view/type_emp'
+    url = f'http://{host}:5984/{employment_sudo}/_design/my_design_doc/_view/type_emp'
     # build the query parameters
     params = urlencode({"key": json.dumps([type_para,emp_para])})
 
@@ -143,7 +153,7 @@ def view_type_employee(type_para,emp_para):
     return response.json()
 
 def view_twitter_area_employee(area_para,emp_para):
-    url = f'http://{host}:5984/employment-twitter/_design/my_design_doc/_view/area_emp'
+    url = f'http://{host}:5984/{employment_twitter}/_design/my_design_doc/_view/area_emp'
     # build the query parameters
     params = urlencode({"key": json.dumps([area_para,emp_para])})
 
@@ -156,7 +166,7 @@ def view_twitter_area_employee(area_para,emp_para):
     return response.json()
 
 def view_twitter_area_marital(area_para,mar_para):
-    url = f'http://{host}:5984/marital-twitter/_design/my_design_doc/_view/area_mar'
+    url = f'http://{host}:5984/{marital_twitter}/_design/my_design_doc/_view/area_mar'
     # build the query parameters
     params = urlencode({"key": json.dumps([area_para,mar_para])})
 
@@ -169,7 +179,7 @@ def view_twitter_area_marital(area_para,mar_para):
     return response.json()
 
 def view_twitter_area_education(area_para,edu_para):
-    url = f'http://{host}:5984/education-twitter/_design/my_design_doc/_view/area_edu'
+    url = f'http://{host}:5984/{education_twitter}/_design/my_design_doc/_view/area_edu'
     # build the query parameters
     params = urlencode({"key": json.dumps([area_para,edu_para])})
 
@@ -182,7 +192,7 @@ def view_twitter_area_education(area_para,edu_para):
     return response.json()
 
 def view_twitter_time_marital(start_year,start_month,mar_para):
-    url = f'http://{host}:5984/marital-twitter/_design/my_design_doc/_view/time_mar'
+    url = f'http://{host}:5984/{marital_twitter}/_design/my_design_doc/_view/time_mar'
     # build the query parameters
     params = urlencode({"key": json.dumps([start_year,start_month,mar_para])})
 
@@ -195,7 +205,7 @@ def view_twitter_time_marital(start_year,start_month,mar_para):
     return response.json()
 
 def view_twitter_time_employee(start_year,start_month,emp_para):
-    url = f'http://{host}:5984/employment-twitter/_design/my_design_doc/_view/time_emp'
+    url = f'http://{host}:5984/{employment_twitter}/_design/my_design_doc/_view/time_emp'
     # build the query parameters
     params = urlencode({"key": json.dumps([start_year,start_month,emp_para])})
 
@@ -208,7 +218,7 @@ def view_twitter_time_employee(start_year,start_month,emp_para):
     return response.json()
 
 def view_twitter_time_education(start_year,start_month,edu_para):
-    url = f'http://{host}:5984/education-twitter/_design/my_design_doc/_view/time_edu'
+    url = f'http://{host}:5984/{education_twitter}/_design/my_design_doc/_view/time_edu'
     # build the query parameters
     params = urlencode({"key": json.dumps([start_year,start_month,edu_para])})
 
@@ -220,10 +230,10 @@ def view_twitter_time_education(start_year,start_month,edu_para):
 
     return response.json()
 
-def view_mastodon_time_marital(start_year,start_month,mar_para):
-    url = f'http://{host}:5984/marital/_design/my_design_doc/_view/time_mar'
+def view_mastodon_time_marital(start_year,start_month,start_day,mar_para):
+    url = f'http://{host}:5984/{mastodon_marital}/_design/my_design_doc/_view/time_mar'
     # build the query parameters
-    params = urlencode({"key": json.dumps([start_year,start_month,mar_para])})
+    params = urlencode({"key": json.dumps([start_year,start_month,start_day,mar_para])})
 
     # construct the full URL
     full_url = f'{url}?{params}'
@@ -232,10 +242,10 @@ def view_mastodon_time_marital(start_year,start_month,mar_para):
     response = requests.get(full_url, auth=auth)
 
     return response.json()
-def view_mastodon_time_education(start_year,start_month,edu_para):
-    url = f'http://{host}:5984/education/_design/my_design_doc/_view/time_edu'
+def view_mastodon_time_education(start_year,start_month,start_day,edu_para):
+    url = f'http://{host}:5984/{mastodon_education}/_design/my_design_doc/_view/time_edu'
     # build the query parameters
-    params = urlencode({"key": json.dumps([start_year,start_month,edu_para])})
+    params = urlencode({"key": json.dumps([start_year,start_month,start_day,edu_para])})
 
     # construct the full URL
     full_url = f'{url}?{params}'
@@ -244,10 +254,10 @@ def view_mastodon_time_education(start_year,start_month,edu_para):
     response = requests.get(full_url, auth=auth)
 
     return response.json()
-def view_mastodon_time_employee(start_year,start_month,emp_para):
-    url = f'http://{host}:5984/employee/_design/my_design_doc/_view/time_emp'
+def view_mastodon_time_employee(start_year,start_month,start_day,emp_para):
+    url = f'http://{host}:5984/{mastodon_employee}/_design/my_design_doc/_view/time_emp'
     # build the query parameters
-    params = urlencode({"key": json.dumps([start_year,start_month,emp_para])})
+    params = urlencode({"key": json.dumps([start_year,start_month,start_day,emp_para])})
 
     # construct the full URL
     full_url = f'{url}?{params}'
