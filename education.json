@@ -1,0 +1,543 @@
+{
+    "mastodon": {
+      "time_education": [
+        {
+          "count": 0,
+          "education": "Type",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "Total",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "Tertiary",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "Other",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "Preschool",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "Primary",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "Secondary",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "Type",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "Total",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "Tertiary",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "Other",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "Preschool",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "Primary",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "Secondary",
+          "time": "2022-2"
+        }
+      ]
+    },
+    "sudo": {
+      "area_education": [
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education_level": "Type"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education_level": "Total"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education_level": "Tertiary"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education_level": "Other"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education_level": "Preschool"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education_level": "Primary"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education_level": "Secondary"
+        }
+      ],
+      "area_school_type": [
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "type_of_education_institution_Full_time_student"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "catholic"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "Total_Primary"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "type_of_education_institution_Total"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "Total_Tertiary"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "of_education_institution_not_stated"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "type_of_education_institution_Part_time_student"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "Total_Secondary"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "other-non-government"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "type_of_education_institution_Full_time_Part_time_student_status_not_stated"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "government"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "school_type": "university"
+        }
+      ],
+      "sex_education": [
+        {
+          "count": 0,
+          "education_level": "Type",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "education_level": "Total",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "education_level": "Tertiary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "education_level": "Other",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "education_level": "Preschool",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "education_level": "Primary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "education_level": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "education_level": "Type",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "education_level": "Total",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "education_level": "Tertiary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "education_level": "Other",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "education_level": "Preschool",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "education_level": "Primary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "education_level": "Secondary",
+          "sex": "Females"
+        }
+      ],
+      "sex_school_type": [
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "school_type": "Secondary",
+          "sex": "Females"
+        }
+      ]
+    },
+    "twitter": {
+      "area_education": [
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "education"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "secondary"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "phd"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "primary"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "master's degree"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "bachelor's degree"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "phd program"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "tertiary_university"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "tertiary_vocational"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "preshool"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "education": "doctorate"
+        }
+      ],
+      "time_education": [
+        {
+          "count": 0,
+          "education": "education",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "secondary",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "phd",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "primary",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "master's degree",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "bachelor's degree",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "phd program",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "tertiary_university",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "tertiary_vocational",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "preshool",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "doctorate",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "education": "education",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "secondary",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "phd",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "primary",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "master's degree",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "bachelor's degree",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "phd program",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "tertiary_university",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "tertiary_vocational",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "preshool",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "education": "doctorate",
+          "time": "2022-2"
+        }
+      ]
+    }
+  }
+  

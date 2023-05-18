@@ -1,0 +1,341 @@
+{
+    "mastodon": {
+      "time_employee": [
+        {
+          "count": 0,
+          "employee": "Clerical and Administrative Workers",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Labourers",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Machinery Operators And Drivers",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Managers",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Professionals",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Sales Workers",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Technicians and Trades Workers",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Clerical and Administrative Workers",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "Labourers",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "Machinery Operators And Drivers",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "Managers",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "Professionals",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "Sales Workers",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "Technicians and Trades Workers",
+          "time": "2022-2"
+        }
+      ]
+    },
+    "sudo": {
+      "area_employee": [
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee_level": "Clerical and Administrative Workers"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee_level": "Labourers"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee_level": "Machinery Operators And Drivers"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee_level": "Managers"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee_level": "Professionals"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee_level": "Sales Workers"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee_level": "Technicians and Trades Workers"
+        }
+      ],
+      "sex_employee": [
+        {
+          "count": 0,
+          "employee_level": "Clerical and Administrative Workers",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "employee_level": "Labourers",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "employee_level": "Machinery Operators And Drivers",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "employee_level": "Managers",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "employee_level": "Professionals",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "employee_level": "Sales Workers",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "employee_level": "Technicians and Trades Workers",
+          "sex": "Males"
+        },
+        {
+          "count": 0,
+          "employee_level": "Clerical and Administrative Workers",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "employee_level": "Labourers",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "employee_level": "Machinery Operators And Drivers",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "employee_level": "Managers",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "employee_level": "Professionals",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "employee_level": "Sales Workers",
+          "sex": "Females"
+        },
+        {
+          "count": 0,
+          "employee_level": "Technicians and Trades Workers",
+          "sex": "Females"
+        }
+      ],
+      "type_employee": [
+        {
+          "count": 0,
+          "employee": "Clerical and Administrative Workers",
+          "type": "part time"
+        },
+        {
+          "count": 0,
+          "employee": "Labourers",
+          "type": "part time"
+        },
+        {
+          "count": 0,
+          "employee": "Machinery Operators And Drivers",
+          "type": "part time"
+        },
+        {
+          "count": 0,
+          "employee": "Managers",
+          "type": "part time"
+        },
+        {
+          "count": 0,
+          "employee": "Professionals",
+          "type": "part time"
+        },
+        {
+          "count": 0,
+          "employee": "Sales Workers",
+          "type": "part time"
+        },
+        {
+          "count": 0,
+          "employee": "Technicians and Trades Workers",
+          "type": "part time"
+        },
+        {
+          "count": 0,
+          "employee": "Clerical and Administrative Workers",
+          "type": "full time"
+        },
+        {
+          "count": 0,
+          "employee": "Labourers",
+          "type": "full time"
+        },
+        {
+          "count": 0,
+          "employee": "Machinery Operators And Drivers",
+          "type": "full time"
+        },
+        {
+          "count": 0,
+          "employee": "Managers",
+          "type": "full time"
+        },
+        {
+          "count": 0,
+          "employee": "Professionals",
+          "type": "full time"
+        },
+        {
+          "count": 0,
+          "employee": "Sales Workers",
+          "type": "full time"
+        },
+        {
+          "count": 0,
+          "employee": "Technicians and Trades Workers",
+          "type": "full time"
+        }
+      ]
+    },
+    "twitter": {
+      "area_employee": [
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee": "Operators and drivers"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee": "service"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee": "manufacture"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee": "Professionals"
+        },
+        {
+          "area": "1GSYD",
+          "count": 0,
+          "employee": "technology"
+        }
+      ],
+      "time_employee": [
+        {
+          "count": 0,
+          "employee": "Operators and drivers",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "service",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "manufacture",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Professionals",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "technology",
+          "time": "2022-1"
+        },
+        {
+          "count": 0,
+          "employee": "Operators and drivers",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "service",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "manufacture",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "Professionals",
+          "time": "2022-2"
+        },
+        {
+          "count": 0,
+          "employee": "technology",
+          "time": "2022-2"
+        }
+      ]
+    }
+  }
+  
