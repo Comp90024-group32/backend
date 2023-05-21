@@ -4,4 +4,4 @@ COPY . /app
 RUN pip install -r requirements.txt
 
 ENV FLASK_APP app
-ENTRYPOINT ["python3","view.py","python3", "backend.py"]
+ENTRYPOINT ["python3", "backend.py"]
