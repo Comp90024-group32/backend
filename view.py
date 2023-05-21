@@ -6,12 +6,12 @@ username = "admin"
 password = "password"
 auth = (username,password)
 
-employment_sudo = ""
-employment_twitter = ""
-education_sudo = ""
-education_twitter = ""
-marital_sudo = ""
-marital_twiter = ""
+employment_sudo = "employment-sudo"
+employment_twitter = "employee-twitter"
+education_sudo = "education-sudo"
+education_twitter = "education-twitter"
+marital_sudo = "marital-sudo"
+marital_twitter = "marital-twitter"
 mastodon_education = "education_v1"
 mastodon_employee = "employee_v1"
 mastodon_marital = "marital_v1"
@@ -78,7 +78,7 @@ mastodon_design_document_edu = {
   
   "views": {
     "time_edu": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
@@ -88,7 +88,7 @@ mastodon_design_document_mar = {
   
   "views": {
     "time_mar": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
@@ -98,7 +98,7 @@ mastodon_design_document_emp = {
   
   "views": {
     "time_emp": {
-      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n var day = parseInt(parts[2]);\n emit([year, month,day,doc['key_word']], parseInt(doc['count_users']));\n}"
+      "map": "function (doc) {\n  var parts = doc.day.split(':');\n  var year = parseInt(parts[0]);\n  var month = parseInt(parts[1]);\n  emit([year, month,doc['key_word']], parseInt(doc['count_users']));\n}"
     }
   }
 }
@@ -126,7 +126,7 @@ twitter_design_document_mar = {
         }
     }
 }
-create_design_document(couchdb_url, twitter_design_document_mar,database_name=marital_twiter)
+create_design_document(couchdb_url, twitter_design_document_mar,database_name=marital_twitter)
 
 twitter_design_document_emp = {
     "views":{

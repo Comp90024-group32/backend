@@ -1,7 +1,10 @@
 from flask import Flask, jsonify, request
 import scenarios
 
+from flask_cors import CORS
+
 app = Flask(__name__)
+cors = CORS(app)
 
 
 @app.route('/api/marital_status', methods=['GET','POST'])

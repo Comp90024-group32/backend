@@ -10,12 +10,12 @@ auth = ('admin', 'password')
 host = "115.146.93.109"
 #host = "localhost"
 
-employment_sudo = ""
-employment_twitter = ""
-education_sudo = ""
-education_twitter = ""
-marital_sudo = ""
-marital_twiter = ""
+employment_sudo = "employment-sudo"
+employment_twitter = "employee-twitter"
+education_sudo = "education-sudo"
+education_twitter = "education-twitter"
+marital_sudo = "marital-sudo"
+marital_twitter = "marital-twitter"
 mastodon_education = "education_v1"
 mastodon_employee = "employee_v1"
 mastodon_marital = "marital_v1"
@@ -207,7 +207,7 @@ def view_twitter_time_marital(start_year,start_month,mar_para):
 def view_twitter_time_employee(start_year,start_month,emp_para):
     url = f'http://{host}:5984/{employment_twitter}/_design/my_design_doc/_view/time_emp'
     # build the query parameters
-    params = urlencode({"key": json.dumps([start_year,start_month,emp_para])})
+    params = urlencode({"key": json.dumps([start_year,start_month,emp_para]),'limit' : 10000})
 
     # construct the full URL
     full_url = f'{url}?{params}'
@@ -230,10 +230,10 @@ def view_twitter_time_education(start_year,start_month,edu_para):
 
     return response.json()
 
-def view_mastodon_time_marital(start_year,start_month,start_day,mar_para):
+def view_mastodon_time_marital(start_year,start_month,mar_para):
     url = f'http://{host}:5984/{mastodon_marital}/_design/my_design_doc/_view/time_mar'
     # build the query parameters
-    params = urlencode({"key": json.dumps([start_year,start_month,start_day,mar_para])})
+    params = urlencode({"key": json.dumps([start_year,start_month,mar_para])})
 
     # construct the full URL
     full_url = f'{url}?{params}'
@@ -242,10 +242,10 @@ def view_mastodon_time_marital(start_year,start_month,start_day,mar_para):
     response = requests.get(full_url, auth=auth)
 
     return response.json()
-def view_mastodon_time_education(start_year,start_month,start_day,edu_para):
+def view_mastodon_time_education(start_year,start_month,edu_para):
     url = f'http://{host}:5984/{mastodon_education}/_design/my_design_doc/_view/time_edu'
     # build the query parameters
-    params = urlencode({"key": json.dumps([start_year,start_month,start_day,edu_para])})
+    params = urlencode({"key": json.dumps([start_year,start_month,edu_para])})
 
     # construct the full URL
     full_url = f'{url}?{params}'
@@ -254,10 +254,10 @@ def view_mastodon_time_education(start_year,start_month,start_day,edu_para):
     response = requests.get(full_url, auth=auth)
 
     return response.json()
-def view_mastodon_time_employee(start_year,start_month,start_day,emp_para):
+def view_mastodon_time_employee(start_year,start_month,emp_para):
     url = f'http://{host}:5984/{mastodon_employee}/_design/my_design_doc/_view/time_emp'
     # build the query parameters
-    params = urlencode({"key": json.dumps([start_year,start_month,start_day,emp_para])})
+    params = urlencode({"key": json.dumps([start_year,start_month,emp_para])})
 
     # construct the full URL
     full_url = f'{url}?{params}'
