@@ -1,8 +1,9 @@
 from flask import Flask, jsonify, request
 import scenarios
 import view
-
+import config
 from flask_cors import CORS
+import argparse
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -41,27 +42,14 @@ def sample3():
     
     return jsonify(response)
 
-"""
-@app.route('/api/sample4', methods=['GET'])
-def sample4():
-    
-    
-    
-    response = scenarios.sample4(request.args)
-    
-    return jsonify(response)
+parser = argparse.ArgumentParser(description='Run the application.')
 
 
-@app.route('/api/sample5', methods=['GET'])
-def sample5():
-    
-    
-    
-    response = scenarios.sample5(request.args)
-    
-    return jsonify(response)
-"""
+parser.add_argument('--port', type=int, default=5000, help='port number (default: 5000)')
+parser.add_argument('--host', type=str, default="127.0.0.1", help='ip address (default: 127.0.0.1)')
+
+args = parser.parse_args()
+
 if __name__ == '__main__':
     view.create_view()
-    app.run(debug=True)
-    
+    app.run(debug=True, port=args.port,host=args.host)
