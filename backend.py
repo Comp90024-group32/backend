@@ -1,5 +1,6 @@
 from flask import Flask, jsonify, request
 import scenarios
+import view
 
 from flask_cors import CORS
 
@@ -61,5 +62,6 @@ def sample5():
     return jsonify(response)
 """
 if __name__ == '__main__':
+    view.create_view()
     app.run(debug=True)
     
