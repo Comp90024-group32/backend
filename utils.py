@@ -1,5 +1,4 @@
 from datetime import datetime, timedelta
-from dateutil.relativedelta import relativedelta
 import calendar
 def generate_month_list(start_year, start_month, end_year, end_month):
     start_date = datetime(start_year, start_month, 1)
