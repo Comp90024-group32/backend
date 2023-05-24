@@ -70,7 +70,7 @@ def view_mastodon_time_education(start_year,start_month,start_day,edu_para):
     response = requests.get(full_url, auth=auth)
 
     return response.json()
-print(view_mastodon_time_education(2023,5,13,'preshool'))
+print(view_data.view_twitter_time_employee(2022,2,'technology'))
 
 
 """
