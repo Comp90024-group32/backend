@@ -1,6 +1,10 @@
 FROM tiangolo/uwsgi-nginx-flask:python3.8-alpine
-RUN apk --update add bash nano
+
+RUN apk update && apk --no-cache add bash nano
+
 WORKDIR /app
 COPY . /app
+
 RUN pip install -r requirements.txt
-CMD ["python", "backend.py","-port",'443']
+
+CMD ["/usr/local/bin/python", "backend.py", "-port", "443"]
